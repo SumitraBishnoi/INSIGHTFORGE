@@ -77,7 +77,7 @@ async def lifespan(app: FastAPI):
     await close_pool()
 
 
-app = FastAPI(title="Quorum API", version="0.1.0", lifespan=lifespan)
+app = FastAPI(title="INSIGHTFORGE API", version="0.1.0", lifespan=lifespan)
 
 app.add_middleware(
     CORSMiddleware,

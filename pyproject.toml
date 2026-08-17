@@ -1,7 +1,7 @@
 [project]
-name = "quorum"
+name = "insightforge"
 version = "0.1.0"
-description = "Agentic RAG platform for CSV, Excel, PDF, and TXT uploads"
+description = "INSIGHTFORGE — AI Document Analyst for CSV, Excel, PDF, and TXT uploads"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [

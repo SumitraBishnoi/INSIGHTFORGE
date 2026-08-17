@@ -1,4 +1,4 @@
-# Quorum — Agentic RAG Platform: Final Plan (v4)
+# INSIGHTFORGE — AI Document Analyst: Final Plan (v4)
 
 **Scope:** RAG-only Q&A across CSV, Excel, PDF, and TXT uploads, for ~100
 concurrent users, uploads up to 1GB. Built as an agentic pipeline (LangGraph)

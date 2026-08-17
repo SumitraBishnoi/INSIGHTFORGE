@@ -25,6 +25,7 @@ import {
   startEmbedding,
   uploadFile,
 } from "@/lib/api-client";
+import { clearApiKey } from "@/lib/settings";
 
 type Step = "upload" | "chunk" | "preview" | "embed" | "ready";
 
@@ -190,6 +191,7 @@ export default function HomePage() {
         /* ignore */
       }
     }
+    clearApiKey();
     setSessionId(null);
     setJobId(null);
     setHistory([]);
@@ -220,7 +222,7 @@ export default function HomePage() {
   if (!mounted) {
     return (
       <div className="space-y-8">
-        <h1 className="text-2xl font-semibold">Quorum</h1>
+        <h1 className="text-2xl font-semibold">INSIGHTFORGE</h1>
         <p className="text-slate-600 dark:text-slate-400">Loading…</p>
       </div>
     );
@@ -230,7 +232,10 @@ export default function HomePage() {
     <div className="space-y-8">
       <div className="flex flex-wrap items-start justify-between gap-4">
         <div>
-          <h1 className="text-2xl font-semibold">Quorum</h1>
+          <h1 className="text-2xl font-semibold">INSIGHTFORGE</h1>
+          <p className="mt-1 text-sm font-medium text-slate-500 dark:text-slate-400">
+            AI Document Analyst
+          </p>
           <p className="mt-2 text-slate-600 dark:text-slate-400">
             Upload → choose chunking → preview → embed → ask questions.
           </p>

@@ -1,10 +1,10 @@
-# Quorum
+# INSIGHTFORGE — AI Document Analyst
 
 An agentic RAG platform that answers questions over CSV, Excel, PDF, and TXT uploads. Built with a LangGraph corrective RAG agent, local embeddings, cross-encoder reranking, and a dual-track evaluation system.
 
 ## How It Works
 
-Upload a document. Quorum splits it into chunks — narrative text is semantically chunked, tabular data is split into narrative vs. categorical fields (categorical metadata becomes Qdrant payload filters instead of being embedded). Ask a question and the LangGraph agent:
+Upload a document. INSIGHTFORGE splits it into chunks — narrative text is semantically chunked, tabular data is split into narrative vs. categorical fields (categorical metadata becomes Qdrant payload filters instead of being embedded). Ask a question and the LangGraph agent:
 
 1. **Retrieves** top-20 candidates from Qdrant (with optional payload filtering)
 2. **Reranks** via a cross-encoder to the top 3
@@ -62,7 +62,7 @@ Question → Retrieve → Rerank → Grade ──→ Generate → Self-check →
 
 ```bash
 # 1. Clone and enter the project
-git clone <repo-url> && cd quorum
+git clone https://github.com/SumitraBishnoi/INSIGHTFORGE.git && cd INSIGHTFORGE
 
 # 2. Create your environment file
 cp .env.example .env
@@ -78,8 +78,8 @@ Three commands and the project is running.
 
 ```powershell
 # 1. Clone and enter the project
-git clone <repo-url>
-cd quorum
+git clone https://github.com/SumitraBishnoi/INSIGHTFORGE.git
+cd INSIGHTFORGE
 
 # 2. Create your environment file
 copy .env.example .env
@@ -162,7 +162,7 @@ db/migrations/          Postgres + SQLite migration scripts
 
 ## Evaluation System
 
-Quorum has a dual-track evaluation system:
+INSIGHTFORGE has a dual-track evaluation system:
 
 **Benchmark (on-demand):** Runs the full agent against a labeled Q&A set and computes retrieval hit rate, answer correctness, faithfulness, and answer relevancy. View results on the eval dashboard at `/eval`.
 
