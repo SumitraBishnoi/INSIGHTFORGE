@@ -17,7 +17,7 @@ Upload a document. INSIGHTFORGE splits it into chunks — narrative text is sema
 Upload → Format Detection → Chunk → Preview → Embed → Qdrant
                                                           ↓
 Question → Retrieve → Rerank → Grade ──→ Generate → Self-check → Answer
-                        ↑         │
+                        ↑          │
                         └─ Rewrite ┘ (up to 2 retries)
 ```
 
